@@ -14,6 +14,8 @@ while True:
         print(100 * "=")
         esperar(1)
 
+        video = yt
+
         print(yt.title)
         desc = yt.description
 
@@ -26,13 +28,22 @@ while True:
         print(100 * "=")
         escolha = input("1-[Continuar]\n2-[Sair]\n")
         print(100 * "=")
+        esperar(1.5)
+        cmd("cls")
 
         if escolha == "1":
-            input("Deseja fazer o download do video?")
+            escolha2 = input("Deseja fazer o download do video?\n[s]-Sim\n[n]-Não\n")
+
+            if escolha2 == "s":
+                print(yt.title)
+                print(desc)
+
+            elif escolha2 == "n":
+                continue
 
         elif escolha == "2":
             break
-        
+
         else:
             print("Digite uma opção válida!!")
 
